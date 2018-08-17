@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body>
+  <h1>Songs</h1>
+  <tbody>
+    <% @songs.each do |song|%>
+    <tr>
+      <td><%= link_to song.title, song_path(song) %> | <%= song.release_year %></td>
+    <tr>
+  </tbody>
+  <% end %></p>
+  <%= link_to "Add new song", new_song_path %>
+</body>
+</html>

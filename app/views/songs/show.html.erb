@@ -1,0 +1,12 @@
+<h1> <%= @song.title %> </h1>
+<p> Artist name: <%= @song.artist_name %></p>
+<p> Release year: <%= @song.release_year %></p>
+<p> Released yet? : <%= @song.released %></p>
+
+<%= link_to "Edit Song", edit_song_path(@song)%><p>
+
+<%= form_tag song_path(@song), method: "delete" do %>
+  <%= submit_tag "Delete Rocket" %>
+<% end %><p>
+
+<%= link_to "Return to songs", songs_path%>
